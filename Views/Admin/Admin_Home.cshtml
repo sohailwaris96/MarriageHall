@@ -1,0 +1,34 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+<section class=menu-container>
+    <h2><span> Wellcome to Admin Panel </span></h2>
+</section>
+<section class=menu-container>
+    
+    <div id="register-form" class="register-form">
+    <h4><span>Select Your Desired Option</span></h4>
+    <form class="search-form" action="#"><!-- Do Not remove the classes -->
+        
+        <div class="search-button-container">
+            <a href="Add_Hall"><input class="btn btn-sm colored" value="Add Hall" type="button" /></a>
+            <a href="Update_Hall"><input class="btn btn-sm colored" value="Update Hall" type="button"/></a>
+            <a href="Delete_Hall"><input class="btn btn-sm colored" value="Delete Hall" type="button"/></a>
+        </div>
+
+        <div class="search-button-container">
+            <a href="Add"><input class="btn btn-sm colored" value="Add Package" type="button"/></a>
+            <a href="Update"><input class="btn btn-sm colored" value="Update Package" type="button"/></a>
+            <a href="Delete"><input class="btn btn-sm colored" value="Delete Package" type="button"/></a>
+        </div>
+
+        <div class="search-button-container">
+            <a href="Gallery_Images"><input class="btn btn-sm colored" value="Update Gallery Images" type="button"/></a>
+            <a href="Slider_Images"><input class="btn btn-sm colored" value="Update Slider Images" type="button"/></a>
+            
+        </div>
+
+    </form>
+</div>
+
+</section>
+@Html.Partial("~/Views/Home/_footer.cshtml");

@@ -1,0 +1,154 @@
+﻿<footer id=top-footer> 
+		<div id=top-footer-content class=container> 
+			<div class="widget col-md-3">
+				<h4>Five Star</h4><!-- Widget's title --> 
+				<div class="content-box row"> 
+					<div class=widget-content>
+						<p> The Most Advanced and luxurious Marriage Hall in Lahore which has been serving for more than 10 years now. </p> 
+						<div class=social-icons> 
+							<a href=# class=facebook></a>
+							<a href=# class=twitter></a>
+							<a href=# class=google-plus></a>
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="widget col-md-3">
+				<h4>Recent Events</h4><!-- Widget's title --> 
+				<div class="content-box row"> 
+					<div class=widget-content>
+						<ul> 
+							<li> 
+								<a href="~/Home/Index#events">
+									<img src=~/images/blog/engage.jpg alt="post 1" class=post-img>
+								</a> 
+								<a href="~/Home/Index#events" class=post-title>Awesome Enagement Function</a> 
+								<div class=date>May 1, 2016</div> 
+							</li> 
+							<li> 
+								<a href="~/Home/Index#events">
+									<img src=~/images/blog/jewel.jpg alt="post 1" class=post-img>
+								</a> 
+								<a href="~/Home/Index#events" class=post-title>Jewellery Fair</a> 
+								<div class=date>May 4, 2016</div> 
+							</li> 
+							<li> 
+								<a href="~/Home/Index#events">
+									<img src=~/images/blog/prize.jpg alt="post 1" class=post-img>
+								</a> 
+								<a href="~/Home/Index#events" class=post-title>School Prize Distribution Ceremony</a> 
+								<div class=date>May 8, 2016</div> 
+							</li> 
+						</ul> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="widget col-md-3">
+				<h4>Tags</h4>
+					<div class="content-box row"> 
+						<div class=widget-content>
+							<a href=# class="tags btn colored">Marriage</a>
+							<a href=# class="tags btn colored">School Ceremony</a> 
+							<a href=# class="tags btn colored">Engagement</a> 
+							<a href=# class="tags btn colored">Conference</a> 
+							<a href=# class="tags btn colored">Jewellery Fair</a> 
+							<a href=# class="tags btn colored">Fashion SHow</a> 
+						</div> 
+					</div> 
+			</div> 
+			<div class="widget col-md-3">
+				<h4>Newsletter Subscribe</h4>
+					<div class="content-box row"> 
+						<div class=widget-content>
+						<p> Subscribe here Now for getting news of all the latest Packages offered by us.. </p> 
+						<form class="sign-up-form clearfix" action="~/Contact/Contact"> 
+							<div class=fields> 
+								<input placeholder=Email type=email>
+							</div> 
+							<div class=button-container> 
+								<input class="btn colored" value="Contact Us Now" type=submit>
+							</div> 
+						</form> 
+						</div> 
+					</div> 
+			</div> 
+		</div> 
+	</footer> 
+	<footer id=footer> 
+		<div id=go-up></div>
+			<ul class="footer-menu container"> 
+				<li><a href=#>Home</a></li> 
+				<li><a href="~/Home/rooms">Halls</a></li> 
+				<li><a href="~/Home/About">About Us</a></li> 
+				<li><a href="~/Home/Contact">Contact Us</a></li> 
+			</ul> 
+			<div class=copyright> Developed by <a href="~/Home/Developer">Sohail Waris</a> </div> 
+	</footer> <!-- END OF FOOTER --> 
+</div> 
+<div id=style-selector> 
+	<div id=style-selector-handle></div> 
+	<div id=style-selector-box> 
+		<div class=layout-selector> 
+			<div class=title>Layouts</div> 
+			<select id=layout-selector> 
+				<option value=1 selected>Wide</option> 
+				<option value=2>Boxed</option> 
+			</select> 
+		</div> 
+		<div class=color-selector> 
+			<div class=title>Preset Colors</div> 
+			<div class="preset_1 selected" data-preset-name=0></div> 
+			<div class=preset_2 data-preset-name=1></div> 
+			<div class=preset_3 data-preset-name=2></div> 
+			<div class=preset_4 data-preset-name=3></div> 
+			<div class=preset_5 data-preset-name=4></div> 
+			<div class=preset_6 data-preset-name=5></div> 
+		</div> 
+		<div class=pattern-selector> 
+			<div class=title>Patterns</div> 
+			<div id=pattern_1 data-pattern-name=0 class=selected></div> 
+			<div id=pattern_2 data-pattern-name=1></div> 
+			<div id=pattern_3 data-pattern-name=2></div> 
+			<div id=pattern_4 data-pattern-name=3></div> 
+			<div id=pattern_5 data-pattern-name=5></div> 
+			<div id=pattern_6 data-pattern-name=6></div> 
+		</div> 
+	</div> 
+</div> 
+<script type=text/javascript src=/Scripts/jquery-1.11.1.min.js></script> 
+<script type=text/javascript src=/Scripts/jquery.modernizr.min.js></script> 
+<script type=text/javascript src=/Scripts/tab.js></script> 
+<script type=text/javascript src=/Scripts/jquery.bxslider.min.js></script> 
+<script type=text/javascript src=/Scripts/owl.carousel.min.js></script> 
+<script type=text/javascript src=/Scripts/jquery.magnific-popup.min.js></script> 
+<script type=text/javascript src=/Scripts/helper.js></script> 
+<script type=text/javascript src=/Scripts/init.js></script> 
+<script type=text/javascript src=/Scripts/template.js></script> 
+<script type=text/javascript>
+    jQuery(document).ready(function () {
+        "use strict";
+        /* Load Properties */
+        jQuery("#roomLoader-container").slideUp();
+        jQuery(".property-boxes .more-detail").click(function (e) {
+            e.preventDefault();
+            jQuery("#roomLoader").addClass('loading');
+            var roomID = jQuery(this).attr('data-room-id');
+            jQuery.ajax('rooms/luxury/' + roomID + '.html')
+            .done(function (data) {
+                jQuery("#roomLoader").addClass('active').removeClass('loading');
+                jQuery("#roomLoader-container").html(data).slideDown(500, jQuery.internal_custom_bxslider);
+            });
+            jQuery('body,html').animate({
+                scrollTop: jQuery(jQuery.attr(this, 'href')).offset().top - 60
+            }, 1000);
+        });
+        // Close the Property Loader box
+        jQuery('#roomLoader .close-icon').click(function () {
+            jQuery("#roomLoader").removeClass('active');
+            jQuery("#roomLoader-container").slideUp().html('');
+        });
+    });
+	</script>  
+</body> 
+
+</html>

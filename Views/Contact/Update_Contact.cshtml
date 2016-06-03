@@ -1,0 +1,24 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model MarriageHall.Models.Contact
+
+<div id="login-form" class="login-form">
+    <form class="search-form" action="/Contact/Update_Contact_Now/@Model.Id" method="post">
+        <div class="search-fields">
+            <input name="Add" type="text" placeholder="Name" value="@Model.Address"/>
+        </div>
+        <div class="search-fields">
+            <input name="Phone" placeholder="Description" type="text" value="@Model.Phone"/>
+        </div>
+        <div class="search-fields">
+            <input name="Email" placeholder="Description" type="text" value="@Model.Email"/>
+        </div>
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Update" type="submit"/>
+        </div>
+    </form>
+</div>
+
+
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

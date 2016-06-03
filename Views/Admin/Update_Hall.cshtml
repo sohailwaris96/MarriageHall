@@ -1,0 +1,22 @@
+﻿@{
+@model MarriageHall.Models.Hall
+@Html.Partial("~/Views/Home/_header.cshtml");    
+}
+
+
+<div id="register-form" class="login-form">
+    <h4><span><b>Update</b> Hall</span></h4>
+    <form class="search-form" action="/Admin/Update_Hall_Check" method="post">
+        <div class="search-fields">
+            @Html.TextBoxFor(m => m.Name)
+            <!--<input name="name" type="text" placeholder="Enter Hall Name" />-->
+        </div>
+        
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Search" type="submit"/>
+        </div>
+    </form>
+</div>
+
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

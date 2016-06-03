@@ -1,0 +1,20 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model MarriageHall.Models.Gallery
+
+<ul class="property-container container"> 
+	<form class="search-form" action="/Admin/Delete_Gallery_Images_Now/@Model.Id" method="post" enctype="multipart/form-data">	
+        <li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
+		<div class=prp-img> 
+            
+			<img src=@Model.Path >
+			
+		</div>
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Delete" type="submit"/>
+        </div>
+		</li>
+   </form>
+		</ul>
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

@@ -1,0 +1,84 @@
+@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model IEnumerable<MarriageHall.Models.Packages>
+
+<section id=internal-title class=container data-background=parallax> 
+    <h1>Packages Table</h1><!-- Internal Page Main titles --> 
+    <ol class=breadcrumb><!-- Internal Page Breadcrumb --> 
+        <li><a href="~/Home/Index">Home</a></li> 
+        <li class=active>Packages Table</li> </ol> 
+
+</section> 
+<section id=price-table-section class="container padding-bottom"> 
+    <section id=price-table class=container> 
+        <h5><span>Choose your desired package and BOOK NOW! </span></h5> 
+        <div class="price-table-container container"> 
+            
+            @foreach(var m in Model){
+            <div class="price-tables col-xs-6 col-md-3"> 
+                <div class=price-tables-inner> 
+                    <div class=table-title>@m.Name </div>
+                    <div class=table-price>Rs. @m.Price <span>Per Person</span></div>
+                    <div class=table-desc> 
+                        <ul>
+                            @if (m.Stage == "Yes" || m.Stage == "yes")
+                            { 
+                                <li class="active"> Special Stage for Groom </li>
+                            }
+                            else
+                            {
+                                <li> Special Stage for Groom </li> 
+                            }
+                            @if (m.OneDish == "Yes" || m.OneDish == "yes")
+                            { 
+                                <li class=active> One Dish Offered </li>
+                            }
+                            else
+                            {
+                                <li> One Dish Offered </li>
+                            }
+                            @if (m.Band == "Yes" || m.Band == "yes")
+                            { 
+                                <li class="active"> Music Band for Groom </li>
+                            }
+                            else
+                            {
+                                <li> Music Band for Groom </li>
+                            }
+                            @if (m.Salad == "Yes" || m.Salad == "yes")
+                            { 
+                                <li class="active"> Special salads </li>
+                            }
+                            else
+                            {
+                                <li> Special salads </li>
+                            }
+                            @if (m.BrideRoom == "Yes" || m.BrideRoom == "yes")
+                            { 
+                                <li class=active> Special Room for Bride </li> 
+                            }
+                            else
+                            {
+                                <li> Special Room for Bride </li> 
+                            }
+                            @if (m.Hall == "No")
+                            { 
+                                
+                            }
+                            else
+                            {
+                                <li class=active> @m.Hall Hall</li>
+                            }
+                        </ul> 
+
+                    </div> 
+                    <a href="~/Contact/Contact"><button class="table-book-butt btn btn-sm colored">Book Now</button></a>
+
+                </div> 
+
+            </div> 
+            }
+    </section> 
+
+</section> <!-- TOP FOOTER --> 
+@Html.Partial("~/Views/Home/_footer.cshtml");

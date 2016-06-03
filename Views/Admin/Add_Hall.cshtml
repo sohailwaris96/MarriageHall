@@ -1,0 +1,30 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model MarriageHall.Models.Hall
+<div id="login-form" class="login-form">
+    <h4><span><b>Add</b> Hall</span></h4>
+    <form class="search-form" action="/Admin/Add_Hall_Now" method="post" enctype="multipart/form-data">
+        <div class="search-fields">
+            @Html.TextBoxFor(m => m.Name)
+            
+        </div>
+        <div class="search-fields">
+            @Html.TextBoxFor(m => m.Desc)
+            
+        </div>
+        <div class="search-fields">
+            @Html.TextBoxFor(m => m.Price)
+            
+        </div>
+        
+        
+        <div class="search-button-container">
+            Upload Image : <input class="btn btn-sm colored" value="Browse" type="file" name="file"/>
+        </div>
+
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Add" type="submit"/>
+        </div>
+    </form>
+</div>
+@Html.Partial("~/Views/Home/_footer.cshtml");

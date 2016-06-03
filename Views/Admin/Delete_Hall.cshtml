@@ -1,0 +1,16 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+<div id="login-form" class="login-form">
+    <h4><span><b>Delete</b> Hall</span></h4>
+    <form class="search-form" action="/Admin/Delete_Hall_Now" method="post">
+        <div class="search-fields">
+            <input name="name" type="text" placeholder="Enter Hall Name" />
+        </div>
+        
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Delete" type="submit"/>
+        </div>
+    </form>
+</div>
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

@@ -1,0 +1,31 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model IEnumerable<MarriageHall.Models.Slider>
+
+<section id=rooms class=luxury> 
+	<h3><span><b>Slider</b> Images</span></h3> 
+	<div id=roomLoader class=container>
+		<div class=loader></div>
+		<div class=close-icon></div>
+		<div id=roomLoader-container></div>
+	</div>
+	<ul class="property-container container"> 
+		@foreach(var hall in Model){
+        <li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
+		<div class=prp-img> 
+            
+			<img src=@hall.Path >
+			
+		</div>
+        <form class="search-form" action="/Admin/Update_Slider_Images/@hall.Id" method="post"> 
+		    <div class=prp-detail> 
+			<!--<a href=#roomLoader data-room-id=4 class="more-detail btn colored">Update</a>-->
+                <input class="btn btn-sm colored" value="Update" type="submit"/>
+                </div>
+        </form>
+		</li>
+  } 
+		</ul> 
+	</section>
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

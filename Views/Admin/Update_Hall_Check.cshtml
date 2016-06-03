@@ -1,0 +1,22 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");    
+
+@model MarriageHall.Models.Hall
+
+<div id="login-form" class="login-form">
+    <form class="search-form" action="/Admin/Update_Hall_Now/@Model.Id" method="post">
+        <div class="search-fields">
+            <input name="name" type="text" placeholder="Name" value="@Model.Name"/>
+        </div>
+        <div class="search-fields">
+            <input name="Desc" placeholder="Description" type="text" value="@Model.Desc"/>
+        </div>
+        <div class="search-fields">
+            <input name="Price" placeholder="Description" type="text" value="@Model.Price"/>
+        </div>
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Update" type="submit"/>
+        </div>
+    </form>
+</div>
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

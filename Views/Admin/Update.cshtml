@@ -1,0 +1,20 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model MarriageHall.Models.Package
+<h2>Update / Edit Packages</h2>
+
+<div id="login-form" class="login-form">
+    <form class="search-form" action="/Packages/Update_Check" method="post" >
+        <div class="search-fields">
+            @*@Html.TextBoxFor(m => m.Name)*@
+            <input name="name" type="text" placeholder="Enter Package Name" />
+        </div>
+        
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Search" type="submit"/>
+        </div>
+    </form>
+
+</div>
+
+@Html.Partial("~/Views/Home/_footer.cshtml");

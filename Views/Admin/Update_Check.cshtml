@@ -1,0 +1,65 @@
+﻿@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model MarriageHall.Models.Packages
+
+<h2>Update_Check</h2>
+<div id="register-form" class="register-form">
+    <form class="search-form" action="/Packages/Update_Now/@Model.Id" method="post" >
+        <div class="search-fields">
+            <input name="name" type="text" placeholder="Name" value="@Model.Name" />
+        </div>
+        <div class="search-fields">
+            <input name="Price" placeholder="Price" type="text" value="@Model.Price"/>
+        </div>
+        <div class="search-fields">
+              <select name="Hall">
+                  <option value="King">King Hall</option>
+                  <option value="Golden">Golden Hall</option>
+                  <option value="Royal">Royal Hall</option>
+                  
+              </select> 
+        </div>
+
+        <label>Special Stage for Groom</label>
+        <div class="search-fields">
+              <select name="Stage">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select> 
+        </div>
+        <label>One Dish Offered</label>
+        <div class="search-fields">
+              <select name="Dish">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select> 
+        </div>
+        <label> Music Band for Groom</label>
+        <div class="search-fields">
+              <select name="Band">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select> 
+        </div>
+        <label>Special salads</label>
+        <div class="search-fields">
+              <select name="Salad">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select> 
+        </div>
+        <label>Special Room for Bride</label>
+        <div class="search-fields">
+              <select name="Room">
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+              </select> 
+        </div>
+
+        <div class="search-button-container">
+            <input class="btn btn-sm colored" value="Update" type="submit"/>
+        </div>
+    </form>
+
+</div>
+@Html.Partial("~/Views/Home/_footer.cshtml");

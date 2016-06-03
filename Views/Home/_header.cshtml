@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html> 
+<!-- Mirrored from www.ravistheme.com/yoona/html/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 May 2016 18:17:41 GMT -->
+<head><meta charset=utf-8><title>Five Star Marriage Hall</title><!-- Website's title ( it will be shown in browser's tab ), Change the website's title based on your Company information -->
+<meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=no">
+<!-- Meta Tags ( They are use for SEO purpose, they don't effect on website's design -->
+<meta name=description content="Five Star Hall is one of the best Marriage Halls in Lahore.">
+<!-- Add your Company short description -->
+<meta name=keywords content=Marriage,Event,Ceremony,Hall,Concert>
+<!-- Add some Keywords based on your Company and your business and separate them by comma0 -->
+<meta name=author content="Sohail Waris, sohailwaris96@gmail.com">
+<!-- End of Meta tags -->
+<link href=http://fonts.googleapis.com/css?family=Droid+Sans:400,700%7cDroid+Serif:400,700,400italic,700italic%7cYellowtail%7cGreat+Vibes rel=stylesheet type=text/css>
+<link rel=stylesheet id=main-style-file type=text/css href="/Content/styles.css">
+<!-- include main style's file ( Do Not change the ID - You can change the styles.css name based on your desired preset color file like "styles_1.css" ) -->
+</head> 
+<body> 
+<!-- Main Wrapper --> 
+	<div class=main-wrapper> 
+	<!-- HEADER --> 
+		<div id=main-header-top> 
+			<div class="main-header-top-container container"> 
+			
+			
+			<!-- End of Language Switcher --> <!-- Top Logo --> 
+			<div id=top-logo data-logo-letter=5>
+			<!-- Replate "Y" with your first letter of Hotel's name for Changing the Theme's logo --> 
+			<a href=#><span>Five </span> Star</a>
+			<span class=five-stars>
+			<!-- Star Box ( you can add / remove the Stars by delete or add the "<i class="fa fa-star"></i>") --> 
+			<i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> 
+			<i class="fa fa-star"></i> 
+			</span> 
+			</div> 
+			<!-- End of Top Logo --> <!-- Login Box Section --> 
+			<ul id=login-box class=list-inline>
+                @if (Session["name"] != null)
+                {
+                    <li><a href="~/Admin/Admin_Home">Admin Panel</a></li>
+                    
+                } 
+				@if (Session["name"] == null) { 
+                       <li><a id=login-form-butt href="~/Admin/login">Login</a></li> 
+                }
+                else
+                {
+                        <li><a href="~/Admin/logout">Logout</a></li>
+                }
+                
+                
+				
+			</ul> <!-- End of Login Box Section --> 
+		</div> 
+	</div> 
+	<header id=main-header> 
+	<!-- Header Main container --> 
+		<div class="header-content container"> 
+			<div class=menu-container> 
+			<!-- Main Menu --> 
+				<nav id=main-menu> 
+					<ul class=main-menu> 
+						<li><a href="~/Home/Index">Home</a></li>
+						<!-- Menu items ( You can change the link and its text ) --> 
+						<li><a href="~/Home/About">About</a></li> 
+						<li><a href="~/Home/rooms_simple">Halls</a></li> 
+						<!--<li class=has-sub-menu><a href=#>Rooms</a> 
+						<ul> 
+							<li><a href=pages/rooms-simple.html>Rooms - Simple List</a></li> 
+							<li><a href=pages/rooms.html>Rooms - Ajax loader</a></li> 
+							<li><a href=pages/room-detail.html>Room Details</a></li> 
+						</ul> 
+						</li> -->
+						
+					<li class=margin-right><a href="~/Home/gallery">Gallery</a></li> 
+					
+					<li><a href="~/Booking/booking"> Booking</a></li>
+					
+					<li><a href="~/Packages/price_table">Packages</a></li> 
+					<!--<li class=has-sub-menu><a href=#>Pages</a>
+					<ul> 
+						<li><a href=pages/staff.html>Meet the Staff</a></li> 
+						<li><a href=pages/price-table.html>Price Table</a></li> 
+						<li><a href=pages/404.html>404</a></li> 
+					</ul> 
+					</li>--> 
+					
+					<!--<li class=has-sub-menu><a href=#>Shortcodes</a> 
+						<ul> 
+							<li><a href=pages/typography.html>Typography</a></li> 
+							<li><a href=pages/columns.html>Columns</a></li> 
+							<li><a href=pages/elements.html>Elements</a></li> 
+							<li><a href=pages/timeline.html>Timeline</a></li> 
+							<li><a href=pages/staff-boxes.html>Staff boxes</a></li> 
+							<li><a href=pages/alerts.html>Breadcrumb &amp; Alerts</a></li> 
+						</ul> 
+					</li> -->
+					<li><a href="~/Contact/Contact">Contact Us</a></li> 
+				</ul> 
+			</nav> 
+			<!-- END of Main Menu --> 
+			<div id=main-menu-handle>
+			<span></span>
+			</div>
+			<!-- Mobile Menu handle --> 
+		</div> 
+	</div> 
+	<!-- End of Header Main container --> 
+        </div>
+</header> 
