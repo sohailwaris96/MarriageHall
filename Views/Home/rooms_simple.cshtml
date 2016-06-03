@@ -1,0 +1,37 @@
+@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model IEnumerable<MarriageHall.Models.Hall>
+<section id=internal-title class=container data-background=parallax> 
+    <h1>Halls</h1> 
+    <ol class=breadcrumb> 
+        <li><a href="~/Home/index">Home</a></li> 
+        <li class=active>Halls</li> 
+
+    </ol> 
+
+</section> <!-- End of Internal Page Main titles boxes --> 
+<section id=rooms-page class=container> <!-- Rooms --> 
+    <section id=rooms> <!-- Main Room container --> 
+        <ul class="property-container clearfix"> 
+            @foreach(var hall in Model){
+        <li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
+		<div class=prp-img> 
+			<img src="@hall.Image" >
+			<div class=price>
+				<span>@hall.Price per person</span>
+			</div>
+		</div> 
+		<div class=prp-detail> 
+			<div class=title>@hall.Name</div>
+			<div class=description> @hall.Desc </div> 
+			<a href=#roomLoader data-room-id=4 class="more-detail btn colored">Details</a>
+		</div> 
+		</li>
+  } 
+            
+        </ul> 
+
+    </section> 
+
+</section> <!-- TOP FOOTER --> 
+@Html.Partial("~/Views/Home/_footer.cshtml");

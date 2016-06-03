@@ -1,0 +1,163 @@
+@Html.Partial("~/Views/Home/_header.cshtml");
+
+@model IEnumerable<MarriageHall.Models.Gallery>
+
+<link rel=stylesheet id=main-style-file type=text/css href="/Content/styles.css">
+ <section id=internal-title class=container data-background=parallax> 
+     <h1>Gallery</h1><!-- Internal Page Main titles --> 
+     <ol class=breadcrumb><!-- Internal Page Breadcrumb --> 
+         <li><a href="~/Home/index">Home</a></li> 
+         <li class=active>Gallery</li> 
+
+     </ol> 
+
+</section> 
+<section id=gallery-page class=container> 
+    <ul class="gallery-img-container clearfix"> 
+        @foreach(var m in Model)
+        {
+            <li class="col-xs-6 col-md-3 suite"> 
+                <a href="@m.Path" >
+                    <img src=@m.Path alt=1>
+                    <!--<div class=caption><span>Sunbathing in beautiful beaches</span></div> -->
+
+                </a> 
+
+            </li>
+        }
+        <!--<li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/2.jpg > 
+                <img src=~/images/gallery/2.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 restaurant"> 
+            <a href=~/images/gallery/3.jpg > 
+                <img src=~/images/gallery/3.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 sauna"> 
+            <a href=~/images/gallery/4.jpg > 
+                <img src=~/images/gallery/4.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 bar"> 
+            <a href=~/images/gallery/5.jpg > 
+                <img src=~/images/gallery/5.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/6.jpg > 
+                <img src=~/images/gallery/6.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/7.jpg > 
+                <img src=~/images/gallery/7.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 bar"> 
+            <a href=~/images/gallery/8.jpg > 
+                <img src=~/images/gallery/8.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 restuarant"> 
+            <a href=~/images/gallery/9.jpg > 
+                <img src=~/images/gallery/9.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/10.jpg > 
+                <img src=~/images/gallery/10.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/11.jpg > 
+                <img src=~/images/gallery/11.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 sauna"> 
+            <a href=~/images/gallery/12.jpg > 
+                <img src=~/images/gallery/12.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/13.jpg > 
+                <img src=~/images/gallery/13.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 suite"> 
+            <a href=~/images/gallery/14.jpg > 
+                <img src=~/images/gallery/14.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 restuarant"> 
+            <a href=~/images/gallery/15.jpg > 
+                <img src=~/images/gallery/15.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+        <li class="col-xs-6 col-md-3 spa"> 
+            <a href=~/images/gallery/15.jpg > 
+                <img src=~/images/gallery/16.jpg alt=1> 
+                
+
+            </a> 
+
+        </li> 
+            -->
+    </ul> 
+    <div class=pagination-box> 
+        <ul> 
+            <li class=active><a href=#><span>1</span></a></li> 
+            <li><a href=#><span>2</span></a></li> 
+            <li><a href=#><span>3</span></a></li> 
+            <li><a href=#><span>4</span></a></li> 
+            <li><a href=#><span>5</span></a></li> 
+
+        </ul> 
+
+    </div> 
+
+</section> <!-- TOP FOOTER --> 
+@Html.Partial("~/Views/Home/_footer.cshtml");

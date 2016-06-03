@@ -1,0 +1,253 @@
+@Html.Partial("~/Views/Home/_header.cshtml");
+
+@*@model IEnumerable<MarriageHall.Models.Hall >*@
+@{
+
+   IEnumerable<MarriageHall.Models.Hall> Halls = ViewData["Halls"] as IEnumerable<MarriageHall.Models.Hall>;
+   IEnumerable<MarriageHall.Models.Slider> Sliders = ViewData["Sliders"] as IEnumerable<MarriageHall.Models.Slider>;
+}
+<section id=slider> 
+    <ul class=bxslider> 
+        @foreach(var s in Sliders){
+		<li> 
+			<div class=items> 
+				<img src="@s.Path" alt=4> 
+					<div class=caption-box>
+					    
+						 
+					</div> 
+            </div>
+		</li>
+        } 
+		
+	</ul> 
+</section> 
+@ViewBag.logout
+<section id=welcome> 
+	<h3><span><b>Welcome</b> to Five Star Banquet Hall</span></h3> 
+	<div class=container> 
+		<div class="service-boxes welcome-text col-md-7 col-xs-12" data-animation=fadeInUp> 
+			<p> All of Us have some special events that we try to make memorable for rest of our lives especially Engagements and Marriages.  </p> 
+			<p> For making functions more better for you, we are always working to our best for generating better and better services for the people of Lahore. </p> 
+			<p> We are looking forward for you to give us a chance for your function so that we can make your Marriage more and more Comfortable and Luxurious. </p> 
+			<cite>Babar Ali - <span>General Manager</span></cite>
+		</div> 
+		<div class="service-boxes welcome-gallery col-md-5 col-xs-12" data-animation=fadeInUp> 
+			<ul class=bxslider-welcome> 
+				<li> 
+					<div class=items>
+						<img src=/images/services/1.jpg alt=1>
+					</div>
+				</li> 
+				<li> 
+					<div class=items><img src=/images/services/2.jpg alt=2>
+					</div> 
+				</li> 
+				<li> 
+					<div class=items><img src=/images/services/3.jpg alt=3>
+					</div> 
+				</li> 
+				<li> 
+					<div class=items><img src=/images/services/4.jpg alt=4>
+					</div> 
+				</li> 
+				<li> 
+					<div class=items><img src=/images/services/5.jpg alt=5>
+					</div> 
+				</li> 
+				<li> 
+					<div class=items><img src=/images/services/6.jpg alt=6>
+					</div> 
+				</li> 
+			</ul>
+		</div> 
+	</div> 
+</section> 
+
+<section id=rooms class=luxury> 
+	<h3><span><b>Luxury</b> Halls</span></h3> 
+	<div id=roomLoader class=container>
+		<div class=loader></div>
+		<div class=close-icon></div>
+		<div id=roomLoader-container></div>
+	</div>
+	<ul class="property-container container"> 
+		@foreach (var hall in Halls)
+  {
+        <li class="property-boxes col-xs-6 col-md-4" data-animation=fadeInLeft data-animation-delay=.2> 
+		<div class=prp-img> 
+            <!--<img src=@hall.Image alt="Deluxe Two-bedroom Suite">-->
+			<img src=@hall.Image alt="Deluxe Hall">
+			<div class=price>
+				<span>@hall.Price per person</span>
+			</div>
+		</div> 
+		<div class=prp-detail> 
+			<div class=title>@hall.Name</div>
+			<div class=description> @hall.Desc </div> 
+			<a href=#roomLoader data-room-id=4 class="more-detail btn colored">Details</a>
+		</div> 
+		</li>
+  } 
+		</ul> 
+	</section> 
+
+	<section id=testimonials data-background=parallax> 
+		<div id=testimonials-container> <h3><span><b>Other</b> Visitor's Experiences</span></h3> 
+			<div id=testimonials-content class=container data-animation=fadeInUp> 
+				<div id=testimonials-slider class="owl-carousel owl-theme"> 
+					<div class=item> <!-- Client's image --> 
+						<div class=client-pic> 
+							<img src=/images/clients/1.jpg alt="Paul Bell"> 
+						</div> 
+						<cite>Nafees Abbas</cite>
+						<blockquote> Really Awesome Facilities for our marriage ceremony especially stage for bride and groom was nice one! </blockquote> 
+						<!-- End of Client's testimonial --> 
+					</div> 
+					<div class=item> 
+						<div class=client-pic> 
+							<img src=/images/clients/2.jpg alt="Paul Bell"> 
+						</div> 
+						<cite>Iqbal Qasim</cite> 
+						<blockquote> Five Star has made our ceremony really wonderfull and full of awesome memories of our function! </blockquote> 
+					</div> 
+					<div class=item> 
+						<div class=client-pic> 
+							<img src=/images/clients/3.jpg alt="Lili Kids"> 
+						</div> 
+						<cite>Gulzar Ahmad</cite> 
+						<blockquote> We enjoyed a lot in our experience with Five Star. I hope it will be nice experience for you as well! </blockquote> 
+					</div> 
+					<div class=item> 
+						<div class=client-pic> 
+							<img src=/images/clients/4.jpg alt="Brad Lopez"> 
+						</div> 
+						<cite>Liaquat Tahir</cite> 
+						<blockquote> The legacy of Marriage ceremony of my daughter just became more and more with special arrangements of Five Star! </blockquote> 
+					</div> 
+					<div class=item> 
+						<div class=client-pic> 
+							<img src=/images/clients/5.jpg alt="Ryan Oswald"> 
+						</div> 
+						<cite> Falak Shair </cite> 
+						<blockquote> I have never seen such an excellent trained staff of any marriage hall in Lahore. Really Awesome Experience with Five Star! </blockquote> 
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+	</section> 
+	<section id=events class=container> 
+		<h3><span><b>Recent</b> Events</span></h3> 
+		<ul class="nav nav-tabs nav-justified" id=tab-type-1>
+			<li data-animation=flipInY data-animation-delay=.2 class=active>
+				<a href=#event-1 data-toggle=tab> 
+				<span class=number>
+					<img src=/images/events/2.jpg alt="Event 1">
+				</span>
+				<span class=title>Jewelery Fair</span>
+				</a> 
+			</li> 
+			<li data-animation=flipInY data-animation-delay=.4> 
+				<a href=#event-2 data-toggle=tab> 
+				<span class=number>
+					<img src=/images/events/4.jpg alt="Event 1">
+				</span>
+				<span class=title>Conference</span>
+				</a> 
+			</li> 
+			<li data-animation=flipInY data-animation-delay=.6> 
+				<a href=#event-3 data-toggle=tab> 
+					<span class=number>
+						<img src=/images/events/3.jpg alt="Event 1">
+					</span>
+					<span class=title>Music Concert</span>
+				</a> 
+			</li> 
+			<li data-animation=flipInY data-animation-delay=.8> 
+				<a href=#event-4 data-toggle=tab> 
+				<span class=number>
+					<img src=/images/events/1.jpg alt="Event 1">
+				</span>
+				<span class=title>Fashion Show</span>
+				</a> 
+			</li> 
+		</ul> 
+		<div id=event-tab-contents class=tab-content data-animation=fadeInUp> 
+			<div class="tab-pane fade in active" id=event-1> 
+				<div class=event-boxes> 
+					<div class="event-box clearfix">
+						<div class="event-pic col-xs-4 col-md-3"> 
+							<img src=/images/events/2.jpg alt=Director>
+						</div> 
+						<div class="event-right col-xs-8 col-md-9"> 
+							<div class=name>Jewelery Fair</div>
+							<div class=date>3 May - 5 May</div> 
+							<div class=description>
+								<p>Wearing jewelry does not always have to have deep meaningful meanings. Often community choose them simply because they like the items. Embellishments such as jewelry are generally the “icing on the lovely cake” to total outfit or anyone look. A Western style outfit is never complete without bright solitaire or any cocktail ring. </p> 
+								<p>Additionally, a “vintage chic” look precisely requires diamonds and pearls. Even if one is not pursue to bring a particular style, ornaments are still a great outlet for statement.</p> 
+								<p> Any person who is a fan of his favorite movie may choose a necklace or a bracelet featuring that logo. Religious people intermittently adorn themselves with jewelry pieces that display the symbol of their faith.</p> 
+							</div> 
+							
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="tab-pane fade" id=event-2> 
+				<div class=event-boxes> 
+					<div class="event-box clearfix">
+						<div class="event-pic col-xs-4 col-md-3"> 
+							<img src=/images/events/4.jpg alt=Director>
+						</div> 
+						<div class="event-right col-xs-8 col-md-9"> 
+							<div class=name>Conference</div>
+							<div class=date>8 May - 10 May</div>
+							<div class=description>
+								<p>Conferences are more than people just presenting information, data, and statistics. Conferences and conventions offer attendees an opportunity to learn from those you may have more experience than you in a specific area, or to even share your experiences with others.</p> 
+								<p>There are likely going to be many important people from your field attending a conference or convention, and this gives you an opportunity to network with them.</p> 
+								
+							</div> 
+							
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="tab-pane fade" id=event-3> 
+				<div class=event-boxes> 
+					<div class="event-box clearfix">
+						<div class="event-pic col-xs-4 col-md-3"> 
+							<img src=/images/events/3.jpg alt=Director>
+						</div> 
+						<div class="event-right col-xs-8 col-md-9"> 
+							<div class=name>Music Concert</div>
+							<div class=date> 15 May </div>
+							<div class=description>
+							<p>Attending live music recitals is INSPIRING.  It makes us WANT to go home and practice.  We want the same experience for our young students.  We want them to leaving a concert feeling that what they want most to do is practice their instrument, and that if they continue to practice, they might be able to play just like the performers they have seen and heard.</p> 
+							<p> Live music can touch the soul in a way that recorded music simply cannot.   It connects the performer to the audience in a deep and powerful way.</p> 
+							
+							</div> 
+							
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+			<div class="tab-pane fade" id=event-4> 
+				<div class=event-boxes> 
+					<div class="event-box clearfix">
+						<div class="event-pic col-xs-4 col-md-3"> 
+							<img src=/images/events/1.jpg alt=Director>
+						</div> 
+						<div class="event-right col-xs-8 col-md-9"> 
+							<div class=name>Fashion Show</div>
+							<div class=date> 20 May </div>
+							<div class=description>
+							<p> Fashion is a fantastic way to express your personality and let people know who you are. You can also change your fashion for different situations and even though you're exactly the same person, because you look different you are perceived differently.</p> 
+							<p> When u first meet someone, and your wearing sweat pants. You come off as lazy, or don't care about your appearance. But, if you were wearing maybe a cute dress. You come off as a happy, enerjetic person.</p> 
+							</div> 
+							
+						</div> 
+					</div> 
+				</div> 
+			</div> 
+		</div> 
+	</section> 
+	@Html.Partial("~/Views/Home/_footer.cshtml");
